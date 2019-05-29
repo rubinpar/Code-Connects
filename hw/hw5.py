@@ -6,3 +6,24 @@
 #    that sum by your age. For example, if your favorite numbers were 1 and 2
 #    and you were 2 years old, you would print the number 1.
 #    Remember to use varaibles.
+
+number = 40
+for index in range(40):
+    print(index)
+
+lower = 0
+upper = 40
+for i in range(lower,upper+1):
+    if(i%2!=0):
+        print(i)
+
+start, end = 0, 40
+for num in range(start, end + 1):
+    if num % 2 != 0:
+        print(num)
+print("----------")
+fav_number = 9
+fav_number2 = 20
+print(fav_number + fav_number2)
+age = 18
+print(fav_number + fav_number2 % age)
