@@ -14,7 +14,7 @@ for index in range(40):
 lower = 0
 upper = 40
 for i in range(lower,upper+1):
-    if(i%2!=0):
+    if i % 2 != 0:
         print(i)
 
 start, end = 0, 40
@@ -22,6 +22,21 @@ for num in range(start, end + 1):
     if num % 2 != 0:
         print(num)
 print("----------")
+
+number = 1
+while number < 40:
+    print(number)
+    number = number + 2
+
+start, end = 0, 40
+for number in range(start, end, 2):
+    print(number)
+
+#while CONDITION:
+#  # (Condition is true or false and continues until the condition is false)
+#   DO STUFF
+
+
 fav_number = 9
 fav_number2 = 20
 print(fav_number + fav_number2)
