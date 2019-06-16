@@ -4,6 +4,7 @@
 # What is the smallest positive number that is evenly
 # divisible by all of the numbers from 1 to 20?
 
+<<<<<<< HEAD
 def divisible_by_n(i, n):
     """
     i is divisible by n without a remainder
@@ -39,6 +40,11 @@ print("Smallest number is ", smallest_divisible_1_thru_x(x=5))
 # 2. write another function
 # Book Inventory
 # Write a function called print_book that will print out the details of a book in
+=======
+# 2. write another function
+# Book Inventory
+# Write a function called printBook that will print out the details of a book in
+>>>>>>> 3fa46c463b59aaf3e55673773e8b92d9f9f886ff
 # a book stores inventory.
 # Input Format
 #
@@ -51,11 +57,16 @@ print("Smallest number is ", smallest_divisible_1_thru_x(x=5))
 # Output Format
 # Print the book details in the format below. Also output the store revenue if
 # they sell all the books in the inventory.
+<<<<<<< HEAD
 #
 #
 # EXAMPLE:
 # Sample Input
 # printBook("I Know Why the Caged Bird Sings", "Maya Angelou", 100, 20)
+=======
+# Sample Input
+# printBook(”I Know Why the Caged Bird Sings”, ”Maya Angelou”, 100, 20)
+>>>>>>> 3fa46c463b59aaf3e55673773e8b92d9f9f886ff
 # Sample Output
 # Title: I Know Why the Caged Bird Sing
 # Author: Maya Angelou
@@ -68,6 +79,7 @@ print("Smallest number is ", smallest_divisible_1_thru_x(x=5))
 # revenue on separate lines. The revenue is the number of copies multiplied by
 # the price per copy, which is 2000.
 
+<<<<<<< HEAD
 
 # Name: print_book
 # Inputs: name of the book [title], author, number of copies, price per copy
@@ -120,4 +132,6 @@ def fizz_buzz(x):
 fizz_buzz(15)
 
 
+=======
+>>>>>>> 3fa46c463b59aaf3e55673773e8b92d9f9f886ff
 # 3. think about a project

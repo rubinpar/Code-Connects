@@ -81,7 +81,7 @@ while not game_is_over:
     # take_umbrella = is_raining or rain_chance >= 50 or day == 13
     # TODO: Use the computer_ships_left and human_ships_left to determine
     # if the game is over
-    game_is_over = False
+    game_is_over = computer_ships_left == 0 or human_ships_left == 0
 
 # We're outside the loop now. So someone won! Whoever has 0 ships left lost!
 if human_ships_left == 0:
