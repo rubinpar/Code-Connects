@@ -37,20 +37,29 @@ def draw_right_triangle(base, height, color="blue"):
         base: x dimension of the right triangle, the bottom part
         height: y dimension of the right triangle, the left vertical part
     """
-    # a^2 + b^2 = c^2
-    # c = sqrt(a^2 + b^2)
-    a, b  = base, height
-    c = math.sqrt(a**2 + b**2)
     pencolor(color)
 
     # draw the bottom part
+    forward(base)
+    left(135)
 
+
+    # a^2 + b^2 = c^2
+    # c = sqrt(a^2 + b^2)
+    a, b  = base, height
+    c = math.sqrt(base**2 + height**2)
     # draw the hypotenuse
+    forward(c)
+    left(135)
 
     # draw the left side
+    forward(height)
+    left(90)
 
-def draw_circle(radius):
-    pass
+#def draw_circle(radius):
+#pass
 
 draw_rectangle(100, 50, color="#28710D")
+
+draw_right_triangle(100, 100, color="#28710D")
 done()
