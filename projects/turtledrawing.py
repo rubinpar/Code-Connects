@@ -39,27 +39,65 @@ def draw_right_triangle(base, height, color="blue"):
     """
     pencolor(color)
 
-    # draw the bottom part
-    forward(base)
-    left(135)
-
-
-    # a^2 + b^2 = c^2
-    # c = sqrt(a^2 + b^2)
+    # calculate sides
     a, b  = base, height
     c = math.sqrt(base**2 + height**2)
+
+    # draw the bottom part
+    forward(a)
+    angle = 180 - math.degrees(math.asin(b/c))
+    left(angle)
+
     # draw the hypotenuse
     forward(c)
-    left(135)
+    angle = 180 - math.degrees(math.asin(a/c))
+    left(angle)
 
     # draw the left side
-    forward(height)
+    forward(b)
     left(90)
 
+def draw_roof(base, height, color="black"):
+    """
+    draws the roof assuming the turtle is in the middle of the top of the house
+    """
+    #draw the right side
+    a, b = base/2, height
+    c = math.sqrt(base**2 + height**2)
+
+    # draw the bottom part
+    forward(a)
+    angle = 180 - math.degrees(math.asin(b/c))
+    left(angle)
+
+    # draw the hypotenuse
+    forward(c)
+    angle = 180 - math.degrees(math.asin(a/c))
+    left(angle)
+
+    # don't draw the left side
+    penup()
+    forward(b)
+    left(90)
+    pendown()
+
+def draw_house(width, height, roof_base, roof_height):
+    # base of the house
+    draw_rectangle(width, height, color="#28710D")
+
+    # get to the roof spot
+    penup()
+    left(90)
+    forward(height)
+    right(90)
+    forward(width/2)
+    pendown()
+
+    # draw the roof
+    draw_roof(roof_base, roof_height)
+
 #def draw_circle(radius):
-#pass
 
-draw_rectangle(100, 50, color="#28710D")
-
-draw_right_triangle(100, 100, color="#28710D")
+shape("turtle")
+draw_house(200, 100, 200, 50)
 done()
