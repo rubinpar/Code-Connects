@@ -62,7 +62,8 @@ class Customer:
     """
     Bank customers!
     """
-    def __init__(self, num):
+    def __init__(self, name, num):
+        self.name = name
         self.balance = num
 
     def get_balance(self):
@@ -74,10 +75,14 @@ class Customer:
     def withdraw(self, amount):
         self.balance -= amount
 
-Brian = Customer(-100)
-Stephanie = Customer(-250)
-Brian.withdraw(401)
-Brian.deposit(80)
+cust1 = Customer("Brian", -100)
+cust2 = Customer("Stephanie", -250)
+#Brian = Customer(-100)
+#Stephanie = Customer(-250)
+#Brian.withdraw(401)
+#Brian.deposit(80)
+print(cust1.balance)
+print(cust2.balance)
 
 # Use a function to determine their current balances
 # Update their balances using other functions so that Brian ends up with $100
