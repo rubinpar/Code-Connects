@@ -1,8 +1,60 @@
-class Shape:
-    def __init__(self, color):
-        self.color = color
+from graphics import Rectangle, Point
+from abc import ABC, abstractmethod
 
-class Triangle(Shape):
+
+class Character(ABC):
+
+    @abstractmethod
+    def move(self, dx, dy):
+        pass
+
+    @abstractmethod
+    def rotate(self, angle, x=0, y=0):
+        pass
+
+    @abstractmethod
+    def recolor(self, color):
+        pass
+
+    @abstractmethod
+    def scale(self, amount):
+        pass
+
+    @abstractmethod
+    def draw(self, window):
+        pass
+
+    @abstractmethod
+    def undraw(self):
+        pass
+
+
+class Square(Character):
+    def __init__(self, color, lower_x, lower_y, size):
+        Character.__init__(self)
+        self.rect = Rectangle(Point(lower_x, lower_y),
+                              Point(lower_x + size, lower_y + size))
+
+    def move(self, dx, dy):
+        self.rect.move(dx, dy)
+
+    def rotate(self, angle, x=0, y=0):
+        pass
+
+    def recolor(self, color):
+        pass
+
+    def scale(self, amount):
+        pass
+
+    def draw(self, window):
+        self.rect.draw(window)
+
+    def undraw(self):
+        self.rect.undraw()
+
+
+class Triangle(Character):
     def __init__(self, color, point1, point2, point3):
         """
         Creates a Triangle.
@@ -13,7 +65,8 @@ class Triangle(Shape):
         point3 = (2, 1)
         triangle = Triangle("black", point1, point2, point3)
         """
-        Shape.__init__(self, color)
+        Character.__init__(self)
+        self.color = color
         self.point1 = point1
         self.point2 = point2
         self.point3 = point3
@@ -27,11 +80,17 @@ class Triangle(Shape):
         self.point2 = (self.point2[0]+dx, self.point2[1]+dy)
         self.point3 = (self.point3[0]+dx, self.point3[1]+dy)
 
-    def rotate(self, point, amount):
+    def rotate(self, angle, x=0, y=0):
         pass
 
     def recolor(self, new_color):
         pass
 
     def scale(self, amount):
+        pass
+
+    def draw(self, window):
+        pass
+
+    def undraw(self):
         pass

@@ -963,7 +963,7 @@ def test():
     win.getMouse()
     p.setFill("red")
     p.setOutline("blue")
-    p.setWidth(2)
+    p.setWidth(10)
     s = ""
     for pt in p.getPoints():
         s = s + "(%0.1f,%0.1f) " % (pt.getX(), pt.getY())
@@ -1002,5 +1002,5 @@ def test():
 # MacOS fix 1
 update()
 
-# if __name__ == "__main__":
-#     test()
+if __name__ == "__main__":
+    test()
