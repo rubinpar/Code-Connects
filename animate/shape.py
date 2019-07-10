@@ -1,9 +1,9 @@
 from graphics import Rectangle, Point
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
-class Character(ABC):
-
+class Character:
+    
     @abstractmethod
     def move(self, dx, dy):
         pass

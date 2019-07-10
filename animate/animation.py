@@ -52,11 +52,10 @@ def test2():
 
 
 def test3():
-    window = GraphWin()
-    window.setCoords(0, 0, 10, 10)
-    s = Square("red", 1, 1, 10)
+    s = Square("red", 1, 1, 3)
     script = [{s: [lambda o: o.move(0.5, 0)]} for _ in range(100)]
     anim = Animation([s], script, delay=0.1)
+    anim.window.setCoords(0, 0, 20, 20)
     anim.show()
 
 
