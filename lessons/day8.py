@@ -66,9 +66,6 @@ class Customer:
         self.name = name
         self.balance = num
 
-    def get_balance(self):
-        return self.balance
-
     def deposit(self, amount):
         self.balance += amount
 
@@ -77,16 +74,18 @@ class Customer:
 
 cust1 = Customer("Brian", -100)
 cust2 = Customer("Stephanie", -250)
-#Brian = Customer(-100)
-#Stephanie = Customer(-250)
-#Brian.withdraw(401)
-#Brian.deposit(80)
+cust1.withdraw(401)
+cust1.deposit(80)
+print(cust1.balance)
+print(cust2.balance)
+cust1.deposit(100 - cust1.balance)
+cust2.deposit(250 - cust2.balance)
 print(cust1.balance)
 print(cust2.balance)
 
 # Use a function to determine their current balances
-# Update their balances using other functions so that Brian ends up with $100
-# and Stephanie ends up with $250
+# Update their balances using other functions so that cust1 ends up with $100
+# and cust2 ends up with $250
 
 
 # Make a pet store!

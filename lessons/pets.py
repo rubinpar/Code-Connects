@@ -110,6 +110,20 @@ marcus.log_hours(12)
 print(rubin.employees)
 rubin.fire_employee(marcus)
 print(rubin.employees)
+jimbob = Employee("Jim Bob", "Cashier", 15, "Colorado")
+lucy = Employee("Lucy", "Cashier", 15, "California")
+rubin.hire_employee(jimbob)
+rubin.hire_employee(lucy)
+print(jimbob.address)
+print(lucy.address)
+
 
 class Customer(Person):
     pass
+
+# Make an animation thing a ma bob
+# Character class: position,  outfit, move around, walk
+    # --- princess, dragon
+# Scene: a set of actions of actions and characters
+# Set:
+# Scenery: subclasses, Trees, Stones,
