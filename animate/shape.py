@@ -1,9 +1,11 @@
-from graphics import Rectangle, Point
+from graphics import Rectangle, Point, Polygon
 from abc import abstractmethod
 
 
 class Character:
-    
+    def __init__(self):
+        pass
+
     @abstractmethod
     def move(self, dx, dy):
         pass
@@ -70,6 +72,8 @@ class Triangle(Character):
         self.point1 = point1
         self.point2 = point2
         self.point3 = point3
+        self.triangle = Polygon(self.point1, self.point2, self.point3)
+        self.triangle.setFill(color)
 
     def move(self, dx, dy):
         """
@@ -79,18 +83,19 @@ class Triangle(Character):
         self.point1 = (self.point1[0]+dx, self.point1[1]+dy)
         self.point2 = (self.point2[0]+dx, self.point2[1]+dy)
         self.point3 = (self.point3[0]+dx, self.point3[1]+dy)
+        self.trianglem.move(dx, dy)
 
     def rotate(self, angle, x=0, y=0):
         pass
 
     def recolor(self, new_color):
-        pass
+        self.triangle.recolor(new_color)
 
     def scale(self, amount):
         pass
 
     def draw(self, window):
-        pass
+        self.triangle.draw(window)
 
     def undraw(self):
-        pass
+        self.triangle.undraw()
